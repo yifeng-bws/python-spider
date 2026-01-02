@@ -9,7 +9,7 @@ def get_info(url):
         response.encoding = response.apparent_encoding
         return response
     except Exception as e:
-        print(f'产生异常，详细为：\n{e}')
+        print(f'Error：{e}')
 
 
 # 实验性功能
@@ -49,3 +49,4 @@ if __name__ == '__main__':
 
         with open("response.html", "w") as f:
             f.write(response.text)
+
