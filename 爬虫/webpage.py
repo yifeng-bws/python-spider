@@ -9,7 +9,7 @@ def get_info(url):
         response.encoding = response.apparent_encoding
         return response
     except Exception as e:
-        print(f'Error：{e}')
+        print(f'Error：\n{e}')
 
 
 # 实验性功能
@@ -17,24 +17,12 @@ def get_info(url):
 get_all_tags(response, tag)
 用于获取网页全部标签，用bs4库解析
 '''
-
-
-def get_all_tags(response, tag):
+def get_all_tags(url, tag):
+    response = requests.get(url)
     search = BeautifulSoup(response.text, 'html.parser')
     tags = search.find_all(tag)
     return tags
 
-
-# 实验性功能
-'''
-tags = tag_traversal(tags)
-使用for循环遍历输出全部标签，分行输出
-'''
-
-
-def tag_traversal(tags):
-    for tag in tags:
-        print(tag)
 
 
 if __name__ == '__main__':
@@ -44,9 +32,7 @@ if __name__ == '__main__':
 
     if response:
         tags = get_all_tags(response, 'p')
-        print(f'获取到的标签：\n{tags}')
-        tag_traversal(tags)
-
-        with open("response.html", "w") as f:
-            f.write(response.text)
+        print('获取到的标签：')
+        for tag in tags:
+            print(tag)
 
