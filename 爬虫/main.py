@@ -1,23 +1,33 @@
+'''
+这里目前是一个网页标签查询器
+后面可能会用于爬取视频网站评论（比如中国的bilibili）
+'''
+
 import webpage
-import webbrowser
-import time
+
+
 def main():
-    try:
-        url = input('请输入查询的网页')
-        response = webpage.get_info(url)
+    url = input('输入查询的网页')
+    response = webpage.get_info(url)
+    print(f'状态码：{response}')
 
-        print(f'状态码：{response}')
-        with open("outcome.html", "w") as f:
-            f.write(response.text)
-        print('已执行，请等待')
+    if response:
+        tag = input('查找网页中的哪个标签？（需加上一对英文单引号）')
+        tags = webpage.get_all_tags(url,tag)
+        print('可能会出现大量标签，建议直接保存到文件夹')
+        user = input('选择输出方式\n1.分行输出\n2.直接输出（列表）\n3.保存到该文件夹(推荐)')
+        if user == '1':
+            for tag in tags:
+                print(tag)
+        elif user == '2':
+            print(tags)
+        elif user == '3':
+            with open('tags.txt', 'w',encoding='utf-8') as file:
+                for tag in tags:
+                    file.write(str(tag) + '\n')
+        else:
+            print('选择无效，请重新运行并输入选项的数字')
 
-        time.sleep(2)
-
-        typ = input('是否打开该网页？')
-        if typ == '是':
-            webbrowser.open_new_tab(url)
-    except Exception as e:
-        print(f'产生异常，详细为\n{e}')
 
 if __name__ == '__main__':
     main()
