@@ -17,8 +17,7 @@ def get_info(url):
 get_all_tags(response, tag)
 用于获取网页全部标签，用bs4库解析
 '''
-def get_all_tags(url, tag):
-    response = requests.get(url)
+def get_all_tags(response, tag):
     search = BeautifulSoup(response.text, 'html.parser')
     tags = search.find_all(tag)
     return tags
@@ -30,7 +29,7 @@ if __name__ == '__main__':
     response = get_info('https://python.org/')
     print(f'状态码：\n{response.status_code}')
 
-    if response:
+    if response and response.ok:
         tags = get_all_tags(response, 'p')
         print('获取到的标签：')
         for tag in tags:
