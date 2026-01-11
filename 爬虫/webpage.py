@@ -28,7 +28,7 @@ def get_all_tags(url, tag):
 if __name__ == '__main__':
     # 示例操作
     response = get_info('https://python.org/')
-    print(f'状态码：\n{response}')
+    print(f'状态码：\n{response.status_code}')
 
     if response:
         tags = get_all_tags(response, 'p')
