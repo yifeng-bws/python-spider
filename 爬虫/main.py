@@ -12,8 +12,8 @@ def main():
     print(f'状态码：{response.status_code if response else "请求失败"}')
 
     if response and response.ok:
-        tag = input('查找网页中的哪个标签？（需加上一对英文单引号）: ')
-        tags = webpage.get_all_tags(response, tag)  # Pass the response object here
+        tag = input('查找网页中的哪个标签？: ')
+        tags = webpage.get_all_tags(response, tag)
         print('可能会出现大量标签，建议直接保存到文件夹')
         user = input('选择输出方式\n1.分行输出\n2.直接输出（列表）\n3.保存到该文件夹(推荐)')
         if user == '1':
