@@ -5,17 +5,6 @@
 [![状态](https://img.shields.io/badge/status-draft-orange)](https://github.com/yifeng-bws/python-spider)
 [![许可证](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
 
-## 目录
-- [关于](#关于)
-- [目标](#目标)
-- [内容](#内容)
-- [路线图](#路线图)
-- [快速开始](#快速开始)
-- [备注](#备注)
-- [贡献指南](#贡献指南)
-- [许可证](#许可证)
-- [联系](#联系)
-
 ## 内容
 - 基础网页抓取
 - 数据解析练习
