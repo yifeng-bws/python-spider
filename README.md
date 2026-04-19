@@ -1,76 +1,49 @@
-# 🕷️ Python Web Scraping Practice Project
+# Python 网页爬取练习项目
 
-A beginner's practice repository for learning Python web scraping — small exercises, notes, and example code.
+一个面向初学者的 Python 网页爬取练习仓库
 
-[![Status](https://img.shields.io/badge/status-draft-orange)](https://github.com/yifeng-bws/python-spider)
-[![License](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
+[![状态](https://img.shields.io/badge/status-draft-orange)](https://github.com/yifeng-bws/python-spider)
+[![许可证](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
 
-## Table of contents
-- [About](#about)
-- [Goals](#goals)
-- [Contents](#contents)
-- [Roadmap](#roadmap)
-- [Quick Start](#quick-start)
-- [Notes](#notes)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+## 目录
+- [关于](#关于)
+- [目标](#目标)
+- [内容](#内容)
+- [路线图](#路线图)
+- [快速开始](#快速开始)
+- [备注](#备注)
+- [贡献指南](#贡献指南)
+- [许可证](#许可证)
+- [联系](#联系)
 
-## About
-This repository contains small exercises and learning notes for Python web scraping. It is a personal practice project for learning and sharing.
+## 内容
+- 基础网页抓取
+- 数据解析练习
+- 简单的数据处理示例
 
-## Goals
-- Learn the basics of Python web scraping
-- Keep a record of practice code and examples
-- Share learning progress and findings
+## 开始 
 
-## Contents
-- Basic web page fetching 🕷️
-- Data parsing practice
-- Simple data processing examples
+前置条件：
+- 建议使用 Python 3.8 及以上
+- 可选：创建虚拟环境
 
-## Roadmap
-- Improve the functionality of `webpage.py`
-- Complete `main.py`
-- Keep the repository English-only (Chinese content archived or removed)
-
-## Quick Start
-(Instructions will be added as the project develops — the commands below are examples.)
-
-Prerequisites:
-- Python 3.8+ (recommended)
-- Optional: create a virtual environment
-
-Clone and install:
+克隆安装：
 ```bash
 git clone https://github.com/yifeng-bws/python-spider.git
 cd python-spider
 python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+source .venv/bin/activate  # Windows 下用 .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Run (example):
+运行示例：
 ```bash
 python main.py
 ```
 
-## Notes
-This project is in an early stage; `main.py` is not yet complete.  
-Implementation is currently pure Python.  
-Feel free to open an Issue to discuss or ask questions.
+## 许可证
+本项目基于 MIT 许可证，详情见 [LICENSE](LICENSE) 文件。
 
-## Contributing
-Contributions and feedback are welcome. Suggested workflow:
-1. Fork the repository.
-2. Create a branch (e.g., `feat/readme-en`).
-3. Open a pull request describing your changes.
-
-Please include tests or examples when adding new functionality.
-
-## License
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
-## Contact
-Maintainer — yifeng-bws  
-Repo: https://github.com/yifeng-bws/python-spider
+## 联系
+维护者 — yifeng-bws  
+仓库地址：https://github.com/yifeng-bws/python-spider
